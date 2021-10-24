@@ -14,7 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.js$/,
@@ -32,13 +32,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
-    new MiniCssExtractPlugin({ filename: 'style.css' }),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new MiniCssExtractPlugin({ filename: 'styles.css' }),
     new CleanWebpackPlugin(),
     new FriendlyErrorsWebpackPlugin(),
   ],
   devServer: {
-    port: 4344,
+    port: 4444,
     open: true,
     stats: 'errors-only',
   },
