@@ -40,5 +40,6 @@ module.exports = {
   devServer: {
     port: 4444,
     open: true,
+    stats: 'errors-only',
   },
 };
