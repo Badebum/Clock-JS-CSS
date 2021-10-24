@@ -13,8 +13,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.js$/,
@@ -38,7 +38,7 @@ module.exports = {
     new FriendlyErrorsWebpackPlugin(),
   ],
   devServer: {
-    port: 4444,
+    port: 4344,
     open: true,
     stats: 'errors-only',
   },
